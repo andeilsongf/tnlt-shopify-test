@@ -1,0 +1,274 @@
+.static-reviews {
+  padding: 7rem 6rem;
+  background-size: cover;
+  background-position: top center;
+  background-color: #2a4835;
+
+  @media (width <= 767px) {
+    padding: 3.2rem 1.6rem;
+  }
+
+  .static-reviews__header {
+    max-width: 144rem;
+    margin: 0 auto;
+    padding: 0 6rem;
+
+    @media (width <= 767px) {
+      padding: 0;
+    }
+
+    @media (768px <= width <= 1180px) {
+      padding: 0;
+    }
+
+    .static-reviews__split-wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      @media (width <= 767px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .static-reviews__details {
+        width: 100%;
+        .static-reviews__subtitle {
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 1.5rem;
+          letter-spacing: 0%;
+          text-transform: uppercase;
+          margin-bottom: 3.2rem;
+          display: block;
+          color: #fff;
+        }
+
+        .static-reviews__title {
+          font-family: Roseritta;
+          font-weight: 700;
+          font-size: 7rem;
+          line-height: 7rem;
+          letter-spacing: 3%;
+          color: #fff;
+          max-width: 64.7rem;
+
+          @media (width <= 767px) {
+            font-size: 4rem;
+            line-height: 4rem;
+          }
+        }
+      }
+
+      .static-reviews__rating {
+        @media (768px <= width <= 1180px) {
+          width: fit-content;
+        }
+
+        .static-reviews__rating-info {
+          display: flex;
+
+          gap: 2.4rem;
+
+          @media (width <= 767px) {
+            gap: 0;
+
+            align-items: flex-start;
+            margin-top: 1.2rem;
+          }
+
+          @media (768px <= width <= 1180px) {
+            align-items: flex-end;
+          }
+
+          .static-reviews__rating {
+            font-family: "ITC Benguiat Std";
+            font-weight: 500;
+            font-size: 7rem;
+            line-height: 100%;
+            letter-spacing: 3%;
+            color: #fff;
+
+            @media (width <= 767px) {
+              font-size: 3rem;
+              line-height: 3rem;
+            }
+
+            @media (768px <= width <= 1180px) {
+              line-height: 100%;
+            }
+          }
+
+          .static-reviews__rating-total-wrapper {
+            display: flex;
+            flex-direction: column;
+            white-space: nowrap;
+            height: 70px;
+            justify-content: space-evenly;
+
+            @media (width <= 767px) {
+              flex-direction: row;
+              white-space: unset;
+              height: unset;
+              align-items: center;
+              gap: 0.5rem;
+            }
+
+            @media (768px <= width <= 1180px) {
+              white-space: unset;
+              height: unset;
+            }
+
+            .static-reviews__rating-total {
+              .static-reviews__stars {
+                display: flex;
+                align-items: flex-end;
+
+                .best-selling-set-card__image {
+                }
+              }
+            }
+
+            .static-reviews__total {
+              font-family: ITC Benguiat Std;
+              font-weight: 500;
+              font-size: 2rem;
+              line-height: 2.7rem;
+              letter-spacing: 3%;
+              color: #fff;
+
+              @media (width <= 767px) {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .static-reviews_container {
+      margin: 6.1rem 0 4.5rem;
+
+      .static-reviews__cards {
+        .swiper-wrapper {
+          .swiper-slide {
+            .static-review-card {
+              display: flex;
+              flex-direction: column;
+              gap: 2.2rem;
+              background-color: #fff;
+              padding: 3rem 4rem;
+
+              @media (width <= 767px) {
+                padding: 2rem;
+              }
+
+              .static-review-card__header {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                .static-review-card__header-author {
+                  display: flex;
+                  width: 100%;
+                  flex-wrap: wrap;
+                  gap: 0.4rem;
+                  align-items: baseline;
+
+                  .static-review-card__name {
+                    font-family: ITC Benguiat Std;
+                    font-weight: 500;
+                    font-size: 2rem;
+                    line-height: 2.7rem;
+                    letter-spacing: 3%;
+                    color: #000;
+                  }
+
+                  .static-review-card__verified {
+                    display: flex;
+                    gap: 0.2rem;
+                    align-items: center;
+                    font-weight: 500;
+                    font-size: 1.4rem;
+                    line-height: 1.4rem;
+                    letter-spacing: 3%;
+                    text-transform: uppercase;
+                    color: #555;
+                  }
+
+                  .static-review-card__rating {
+                    display: flex;
+                    flex: 1;
+                    flex-basis: 100%;
+                  }
+                }
+              }
+
+              .static-review-card__information {
+                .static-review-card__title {
+                  font-family: "ITC Benguiat Std";
+                  font-size: 2.5rem;
+                  line-height: 2.7rem;
+                  letter-spacing: 3%;
+                  color: #000;
+                  margin-bottom: 2.2rem;
+                  margin-top: 0.6rem;
+                }
+
+                .static-review-card__description {
+                  font-weight: 400;
+                  font-size: 1.8rem;
+                  line-height: 130%;
+                  letter-spacing: 0%;
+                  color: #555;
+                }
+              }
+
+              .static-review-card__footer {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                padding-top: 1.8rem;
+                border-top: 0.1rem solid #ddd;
+                align-items: flex-end;
+
+                .static-review-card__date {
+                  font-weight: 400;
+                  font-size: 1.5rem;
+                  line-height: 100%;
+                  letter-spacing: 0%;
+                  color: #777;
+                  font-family: "Helvetica";
+                }
+
+                .static-review-card__brand {
+                  .static-review-card__image {
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .static-reviews__cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.4rem 3.1rem;
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 2.1rem;
+      letter-spacing: 0%;
+      text-align: center;
+      text-transform: uppercase;
+      color: #2a4835;
+      width: fit-content;
+      background: #fff;
+      margin: 0 auto;
+    }
+  }
+}

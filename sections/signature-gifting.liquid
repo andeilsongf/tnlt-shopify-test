@@ -1,0 +1,103 @@
+{%- style -%}
+  {% render 'signature-gifting.css' %}
+{%- endstyle -%}
+
+<!-- Hero Section -->
+
+<section
+  class="hero-signature-gifting"
+  style="background-image: url('{{ section.settings.background_image | image_url: width: 1920 }}');"
+>
+  <div class="hero-signature-gifting__content">
+    {%- if section.settings.subtitle != blank -%}
+      <p class="hero-signature-gifting__subtitle">{{ section.settings.subtitle }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.title != blank -%}
+      <h1 class="hero-signature-gifting__title">{{ section.settings.title }}</h1>
+    {%- endif -%}
+
+    {%- if section.settings.description != blank -%}
+      <p class="hero-signature-gifting__description">{{ section.settings.description }}</p>
+    {%- endif -%}
+
+    <div class="hero-signature-gifting__cta-container">
+      {%- if section.settings.cta1_text != blank -%}
+        <a href="{{ section.settings.cta1_url }}" class="hero-signature-gifting__cta hero-signature-gifting__cta--primary">{{ section.settings.cta1_text }}</a>
+      {%- endif -%}
+
+      {%- if section.settings.cta2_text != blank -%}
+        <a href="{{ section.settings.cta2_url }}" class="hero-signature-gifting__cta hero-signature-gifting__cta--secondary">{{ section.settings.cta2_text }}</a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Signature Gifting",
+  "class": "shopify-section-signature-gifting",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "New Collection"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Summer Essentials"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Discover our premium selection of seasonal items"
+    },
+    {
+      "type": "header",
+      "content": "Call to Action 1"
+    },
+    {
+      "type": "text",
+      "id": "cta1_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "cta1_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Call to Action 2"
+    },
+    {
+      "type": "text",
+      "id": "cta2_text",
+      "label": "Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "cta2_url",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Signature Gifting",
+      "category": "section"
+    }
+  ]
+}
+{% endschema %}

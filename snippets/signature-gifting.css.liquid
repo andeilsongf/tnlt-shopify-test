@@ -1,0 +1,112 @@
+.hero-signature-gifting {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 12.1rem 6rem;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center center;
+
+  @media (width <= 767px) {
+    padding: 5rem 1.6rem;
+  }
+
+  .hero-signature-gifting__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.7rem;
+    width: 144rem;
+    margin: 0 auto;
+    padding: 0 6rem;
+
+    @media (width <= 767px) {
+      padding: 0;
+    }
+
+    @media (768px <= width <= 1180px) {
+      padding: 0;
+    }
+
+    .hero-signature-gifting__subtitle {
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 1.5rem;
+      color: #ffffffbd;
+    }
+
+    .hero-signature-gifting__title {
+      font-size: 7rem;
+      line-height: 7rem;
+      letter-spacing: 3%;
+      color: #fff;
+      margin: 0;
+      max-width: 75rem;
+
+      @media (width <= 767px) {
+        font-size: 4rem;
+        line-height: 4rem;
+      }
+
+      @media (768px <= width <= 1180px) {
+        font-size: 5rem;
+        line-height: 5rem;
+      }
+    }
+
+    .hero-signature-gifting__description {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      color: #fff;
+      max-width: 62rem;
+
+      @media (768px <= width <= 1180px) {
+        max-width: 50rem;
+      }
+    }
+
+    .hero-signature-gifting__cta-container {
+      display: flex;
+      gap: 2.3rem;
+      align-items: center;
+      margin-top: 1rem;
+
+      .hero-signature-gifting__cta {
+        width: 19.2rem;
+        height: 4.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .hero-signature-gifting__cta--primary {
+        background: #fff;
+        font-weight: 700;
+        color: #191919;
+        border: 0.1rem solid transparent;
+
+        &:hover {
+          background: transparent;
+          color: #fff;
+          border: 0.1rem solid #fff;
+        }
+      }
+
+      .hero-signature-gifting__cta--secondary {
+        background: transparent;
+        border: 0.1rem solid #fff;
+        font-weight: 400;
+        color: #fff;
+
+        &:hover {
+          background: #fff;
+          color: #191919;
+        }
+      }
+    }
+  }
+}

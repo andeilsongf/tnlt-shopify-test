@@ -1,0 +1,30 @@
+<div class="static-review-card">
+  <div class="static-review-card__header">
+    <div class="static-review-card__header-author">
+      <span class="static-review-card__name">{{ block.settings.name }}</span>
+      <span class="static-review-card__verified">
+        <img src="{{ 'icon-check.svg' | asset_url }}" alt="Verification">
+        VERIFIED</span
+      >
+      <div class="static-review-card__rating">
+        {% for i in (1..5) %}
+          <img src="{{ 'star.svg' | asset_url }}" alt="Star">
+        {% endfor %}
+      </div>
+    </div>
+    <img src="{{ 'quotes.svg' | asset_url }}" alt="Quotes">
+  </div>
+  <div class="static-review-card__information">
+    <div class="static-review-card__title">{{ block.settings.title }}</div>
+    <div class="static-review-card__description">{{ block.settings.description }}</div>
+  </div>
+  <div class="static-review-card__footer">
+    <span class="static-review-card__date">{{ block.settings.date }}</span>
+    <span class="static-review-card__brand">
+      <img
+        class="static-review-card__image"
+        src="{{ block.settings.image | img_url: '100x' }}"
+        alt="{{ block.settings.name }}"
+    ></span>
+  </div>
+</div>

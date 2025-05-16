@@ -1,0 +1,53 @@
+{%- style -%}
+  {% render 'best-selling-set-card.css' %}
+{%- endstyle -%}
+
+{% assign product = product | default: blank %}
+{% if product != blank %}
+  <div class="best-selling-set-card">
+    <div class="best-selling-set-card__image-wrapper">
+      {% if badge != blank %}
+        <span class="best-selling-set-card__badge">{{ badge }}</span>
+      {% endif %}
+      <a href="{{ product.url }}">
+        <img
+          src="{{ product.featured_image | image_url: width: 600 }}"
+          alt="{{ product.title | escape }}"
+          class="best-selling-set-card__image"
+        >
+      </a>
+      <form method="post" action="/cart/add" class="best-selling-set-card__add-form">
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+        <button type="submit" class="best-selling-set-card__add-btn">ADD TO CART</button>
+      </form>
+    </div>
+    <div class="best-selling-set-card__info">
+      <div class="best-selling-set-card__footer">
+        <h3 class="best-selling-set-card__title">
+          <a href="{{ product.url }}">{{ product.title }}</a>
+        </h3>
+        <div class="best-selling-set-card__price">
+          {{ product.price | money }}
+        </div>
+      </div>
+      <div class="best-selling-set-card__reviews">
+        <span class="best-selling-set-card__stars">
+          {% assign rating = product.metafields.reviews.rating.value | default: 5 %}
+          {% for i in (1..rating) %}
+            <img
+              src="{{ 'star.svg' | asset_url  }}"
+              alt="{{ product.title | escape }}"
+              class="best-selling-set-card__image"
+            >
+          {% endfor %}
+        </span>
+        <span class="best-selling-set-card__review-count">
+          {% assign reviews = product.metafields.reviews.count | default: 43 %}
+          {{ reviews }} reviews
+        </span>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<style></style>

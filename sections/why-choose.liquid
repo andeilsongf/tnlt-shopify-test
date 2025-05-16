@@ -1,0 +1,96 @@
+{%- style -%}
+  {% render 'why-choose-tnlt.css' %}
+{%- endstyle -%}
+
+<script src="{{ 'why-choose.js' | asset_url }}" defer="defer"></script>
+
+<section
+  class="why-choose"
+  style="margin-top: {{ section.settings.margin_top }}px; margin-bottom: {{ section.settings.margin_bottom }}px;"
+>
+  <div class="why-choose__header">
+    {% if section.settings.subtitle != blank %}
+      <p class="why-choose__subtitle">{{ section.settings.subtitle }}</p>
+    {% endif %}
+    {% if section.settings.title != blank %}
+      <h2 class="why-choose__title">{{ section.settings.title }}</h2>
+    {% endif %}
+  </div>
+  <div class="why-choose__cards swiper" id="why-choose-swiper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide">
+          {% render 'product-card', block: block %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Why Choose",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Why Choose Homecourt"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "<h2>Elevating Everyday Routines</h2>"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Margin Top (px)",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Margin Bottom (px)",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Card Description"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Why Choose",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,112 @@
+{%- style -%}
+  {% render 'best-selling-sets.css' %}
+{%- endstyle -%}
+
+<script src="{{ 'best-selling-sets.js' | asset_url }}" defer="defer"></script>
+
+<section
+  style="background-image: url('{{ section.settings.background_image | image_url: width: 1920 }}');padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"
+  class="best-selling-sets"
+>
+  <img class="best-selling-sets__before" src="{{ section.settings.background_image_left | image_url: width: 300 }}">
+  <img class="best-selling-sets__after" src="{{ section.settings.background_image_right | image_url: width: 300 }}">
+  <div class="best-selling-sets__header">
+    {% if section.settings.subtitle != blank %}
+      <p class="best-selling-sets__subtitle">{{ section.settings.subtitle }}</p>
+    {% endif %}
+    {% if section.settings.title != blank %}
+      <h2 class="best-selling-sets__title">{{ section.settings.title }}</h2>
+    {% endif %}
+  </div>
+  <div class="best-selling-sets__cards">
+    <div class="swiper products-swiper">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide">
+            {% render 'best-selling-set-card', product: block.settings.product, badge: block.settings.badge %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="swiper-button-prev">
+      <img src="{{ 'arrow-left.svg' | asset_url }}" alt="Prev">
+    </div>
+    <div class="swiper-button-next">
+      <img src="{{ 'arrow-right.svg' | asset_url }}" alt="Next">
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Best Selling Sets",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image_left",
+      "label": "Background Image Left (opcional)"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_right",
+      "label": "Background Image Right (opcional)"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "BEST-SELLING SETS"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "DISCOVER OUR BEST-SELLING SETS FOR HOME AND BODY."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top (px)",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom (px)",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "set",
+      "name": "Set Card",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge (e.g. SAVE 10%)",
+          "default": "SAVE 10%"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Best Selling Sets",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,133 @@
+{%- style -%}
+  {% render 'personal-inquiry.css' %}
+{%- endstyle -%}
+
+<section
+  class="personal-inquiry-section"
+  style="
+    background-image: url('{{ section.settings.background_image | image_url: width: 1920 }}');
+    padding-top: {{ section.settings.padding_top | default: '60' }}px;
+    padding-bottom: {{ section.settings.padding_bottom | default: '60' }}px;
+  "
+>
+  <div class="personal-inquiry-section__container">
+    <div class="personal-inquiry-section__content">
+      <span class="personal-inquiry-section__eyebrow">{{ section.settings.eyebrow }}</span>
+      <h2 class="personal-inquiry-section__title">{{ section.settings.title }}</h2>
+      <div class="personal-inquiry-section__description">{{ section.settings.description }}</div>
+    </div>
+    <div class="personal-inquiry-section__form-wrapper">
+      <form class="personal-inquiry-section__form" method="post" action="/contact#contact_form">
+        <div class="personal-inquiry-section__form-row">
+          <div class="personal-inquiry-section__form-group">
+            <label for="first_name">First Name*</label>
+            <input type="text" id="first_name" name="contact[first_name]" required placeholder="Enter your first name">
+          </div>
+          <div class="personal-inquiry-section__form-group">
+            <label for="last_name">Last Name*</label>
+            <input type="text" id="last_name" name="contact[last_name]" required placeholder="Enter your last name">
+          </div>
+        </div>
+        <div class="personal-inquiry-section__form-row">
+          <div class="personal-inquiry-section__form-group">
+            <label for="company_name">Company Name*</label>
+            <input type="text" id="company_name" name="contact[company_name]" required placeholder="Enter company name">
+          </div>
+          <div class="personal-inquiry-section__form-group">
+            <label for="email">Email Address*</label>
+            <input type="email" id="email" name="contact[email]" required placeholder="Enter your email address">
+          </div>
+        </div>
+        <div class="personal-inquiry-section__form-row">
+          <div class="personal-inquiry-section__form-group">
+            <label for="phone">Phone Number*</label>
+            <input type="tel" id="phone" name="contact[phone]" required placeholder="Enter your phone number">
+          </div>
+          <div class="personal-inquiry-section__form-group">
+            <label for="product_type">Product Type*</label>
+            <select id="product_type" name="contact[product_type]" required>
+              <option value="">Please select</option>
+              <option value="Gift Set">Gift Set</option>
+              <option value="Hand Soap">Hand Soap</option>
+              <option value="Surface Cleaner">Surface Cleaner</option>
+            </select>
+          </div>
+        </div>
+        <div class="personal-inquiry-section__form-row">
+          <div class="personal-inquiry-section__form-group">
+            <label class="label-window">Delivery Window</label>
+            <div class="personal-inquiry-section__form-row">
+              <div class="personal-inquiry-section__form-group">
+                <label for="earliest_date">Earliest Date *</label>
+                <input type="date" id="earliest_date" name="contact[earliest_date]" required>
+              </div>
+              <div class="personal-inquiry-section__form-group">
+                <label for="latest_date">Latest Date *</label>
+                <input type="date" id="latest_date" name="contact[latest_date]" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="personal-inquiry-section__form-row">
+          <div class="personal-inquiry-section__form-group" style="width: 100%;">
+            <label for="notes"><strong>Additional Notes (Tell us more about what you are looking for)</strong></label>
+            <textarea id="notes" name="contact[notes]" placeholder="Enter your message here"></textarea>
+          </div>
+        </div>
+        <div class="personal-inquiry-section__form-row">
+          <button type="submit" class="personal-inquiry-section__submit">INQUIRE NOW</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Personal Inquiry Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "GET IN TOUCH"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "LET'S MAKE IT PERSONAL"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Whether you're thanking clients, welcoming new hires, or celebrating milestones, our curated gift sets offer a refined blend of beauty, fragrance, and function—crafted to elevate every space they touch."
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "default": 60,
+      "info": "Eg: 60"
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "default": 60,
+      "info": "Eg: 60"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Personal Inquiry Section"
+    }
+  ]
+}
+{% endschema %}

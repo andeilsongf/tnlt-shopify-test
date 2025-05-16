@@ -1,0 +1,53 @@
+.why-choose {
+  display: flex;
+  flex-direction: column;
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 0 6rem;
+
+  @media (width <= 767px) {
+    padding: 0 1.6rem;
+  }
+
+  .why-choose__header {
+    margin-bottom: 5.1rem;
+
+    @media (width <= 767px) {
+      margin-bottom: 3rem;
+    }
+
+    .why-choose__subtitle {
+      font-size: 1.8rem;
+      line-height: 0.15rem;
+      margin-bottom: 2.6rem;
+      color: #333333;
+    }
+
+    .why-choose__title {
+      font-size: 7rem;
+      line-height: 7rem;
+      letter-spacing: 3%;
+      color: #333333;
+
+      @media (width <= 767px) {
+        font-size: 4rem;
+        line-height: 4rem;
+      }
+    }
+  }
+
+  .why-choose__cards {
+    width: 100%;
+    display: flex;
+    gap: 2.4rem;
+    align-items: flex-start;
+
+    @media (width >= 768px) {
+      .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+    }
+  }
+}

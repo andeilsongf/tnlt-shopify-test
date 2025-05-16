@@ -1,1 +1,298 @@
-{"sections":{"image_banner":{"type":"image-banner","blocks":{"heading":{"type":"heading","settings":{"heading":"Browse our latest products","heading_size":"h0"}},"button":{"type":"buttons","settings":{"button_label_1":"Shop all","button_link_1":"shopify:\/\/collections\/all","button_style_secondary_1":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading","button"],"settings":{"image_overlay_opacity":40,"image_height":"large","image_behavior":"none","desktop_content_position":"bottom-center","desktop_content_alignment":"center","show_text_box":false,"color_scheme":"scheme-3","stack_images_on_mobile":false,"mobile_content_alignment":"center","show_text_below":false}},"featured_collection":{"type":"featured-collection","settings":{"collection":"all","products_to_show":8,"title":"Featured products","heading_size":"h2","description":"","show_description":false,"description_style":"body","columns_desktop":4,"enable_desktop_slider":false,"full_width":false,"show_view_all":true,"view_all_style":"solid","color_scheme":"scheme-1","image_ratio":"adapt","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":false,"padding_top":44,"padding_bottom":36}}},"order":["image_banner","featured_collection"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+  "sections": {
+    "corporate_gifting_how_it_works_ejLVkP": {
+      "type": "corporate-gifting-how-it-works",
+      "blocks": {
+        "step_C6FiJg": {
+          "type": "step",
+          "settings": {
+            "show_index": true,
+            "step_title": "Choose Your Gift Set",
+            "step_description": "Select from our curated bundles or build a custom assortment—perfect for clients, new hires, or team celebrations. Each set is thoughtfully composed with our most loved luxury homecare products."
+          }
+        },
+        "step_DrFRCh": {
+          "type": "step",
+          "settings": {
+            "show_index": true,
+            "step_title": "Add Your Personal Touch",
+            "step_description": "Include a note, custom ribbon, or branded card. Every detail can be tailored to reflect your company’s voice and values."
+          }
+        },
+        "step_WfE9qm": {
+          "type": "step",
+          "settings": {
+            "show_index": true,
+            "step_title": "Gifts That Arrive Ready to Impress",
+            "step_description": "Each order is hand-packed with care, beautifully boxed, and shipped directly to your recipients. No extra wrapping needed—just a perfect unboxing experience, every time."
+          }
+        },
+        "step_AQxBAE": {
+          "type": "step",
+          "settings": {
+            "show_index": false,
+            "step_image": "shopify://shop_images/homecourt-step-04.svg",
+            "step_title": "Cleaner Gifting for a Cleaner Planet",
+            "step_description": "Every product is made with non-toxic, vegan, and cruelty-free ingredients—formulated with organic fragrance oils and consciously packaged."
+          }
+        }
+      },
+      "block_order": [
+        "step_C6FiJg",
+        "step_DrFRCh",
+        "step_WfE9qm",
+        "step_AQxBAE"
+      ],
+      "name": "How Corporate Gifting Works",
+      "settings": {
+        "main_image": "shopify://shop_images/homecourt-how-it-works.webp",
+        "title": "HOW IT WORKS",
+        "punchline": "MORE THAN A GIFT. IT'S A GESTURE",
+        "description": "Leave a lasting impression with homecare gifts that speak volumes—crafted with intention, clean formulations, and custom fragrance blends.",
+        "cta_link": "https://google.com",
+        "cta_text": "INQUIRE NOW",
+        "margin_top": 92,
+        "margin_bottom": 96
+      }
+    },
+    "why_choose_HXQmrQ": {
+      "type": "why-choose",
+      "blocks": {
+        "card_WxP97x": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/homecourt-signature-fragance-experience.webp",
+            "title": "Signature Fragrance Experience",
+            "description": "World-renowned perfumers, our scents elevate daily rituals into sensory moments."
+          }
+        },
+        "card_XyqRxd": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/homecourt-clean-and-conscious.webp",
+            "title": "Clean & Conscious",
+            "description": "Non-toxic, vegan, cruelty-free, and packaged with sustainability in mind."
+          }
+        },
+        "card_gHFAMK": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/homecourt-premium-formulations.webp",
+            "title": "Premium Formulations",
+            "description": "From our surface cleaner to hand cream, each product is powered by organic ingredients."
+          }
+        },
+        "card_PFY7E9": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/homecourt-quality-at-the-core.webp",
+            "title": "Quality at the Core",
+            "description": "Meeting highest standards: organic, non-toxic, made for design-conscious homes."
+          }
+        }
+      },
+      "block_order": [
+        "card_WxP97x",
+        "card_XyqRxd",
+        "card_gHFAMK",
+        "card_PFY7E9"
+      ],
+      "name": "Why Choose",
+      "settings": {
+        "subtitle": "WHY CHOOSE HOMECOURT",
+        "title": "<p>Elevating <br/>Everyday Routines</p>",
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "signature_gifting_dBhmcK": {
+      "type": "signature-gifting",
+      "name": "Signature Gifting",
+      "settings": {
+        "background_image": "shopify://shop_images/homecourt-gifting-with-purpose.webp",
+        "subtitle": "GIFTING WITH PURPOSE",
+        "title": "SIGNATURE GIFTS. TIMELESS IMPRESSIONS.",
+        "description": "Each Homecourt set is more than a gesture, it’s a fragrant reflection of your brand’s care, crafted with clean ingredients, luxury formulations, and deep intention.",
+        "cta1_text": "INQUIRE NOW",
+        "cta1_url": "https://google.com",
+        "cta2_text": "",
+        "cta2_url": ""
+      }
+    },
+    "best_selling_sets_TrGFTy": {
+      "type": "best-selling-sets",
+      "blocks": {
+        "set_9wTM4r": {
+          "type": "set",
+          "settings": {
+            "product": "gift-card",
+            "badge": "SAVE 10%"
+          }
+        },
+        "set_RwnLTb": {
+          "type": "set",
+          "settings": {
+            "product": "product-2",
+            "badge": "SAVE 10%"
+          }
+        },
+        "set_rwVdcK": {
+          "type": "set",
+          "settings": {
+            "product": "steeped-rose-kitchen-trio",
+            "badge": "SAVE 10%"
+          }
+        },
+        "set_Kdh6QN": {
+          "type": "set",
+          "settings": {
+            "product": "steeped-rose-kitchen-trio-1",
+            "badge": "SAVE 10%"
+          }
+        },
+        "set_iYJBH9": {
+          "type": "set",
+          "settings": {
+            "product": "gift-card",
+            "badge": "SAVE 10%"
+          }
+        }
+      },
+      "block_order": [
+        "set_9wTM4r",
+        "set_RwnLTb",
+        "set_rwVdcK",
+        "set_Kdh6QN",
+        "set_iYJBH9"
+      ],
+      "name": "Best Selling Sets",
+      "settings": {
+        "background_image_left": "shopify://shop_images/before-left.png",
+        "background_image_right": "shopify://shop_images/before-right.png",
+        "subtitle": "BEST-SELLING SETS",
+        "title": "DISCOVER OUR BEST-SELLING SETS FOR HOME AND BODY.",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "static_reviews_RPr6eh": {
+      "type": "static-reviews",
+      "blocks": {
+        "review_FYEA4Y": {
+          "type": "review",
+          "settings": {
+            "name": "Genevieve M.",
+            "verified": true,
+            "rating": 5,
+            "title": "Very Pleased with my purchase!",
+            "description": "I ordered the rose-steeped dishwashing liquid, hand soap, and spray bottle with surface cleaner for the kitchen. The products are elegant looking, smell great and they lift my spirits each time they are used.",
+            "date": "24.02.2023",
+            "image": "shopify://shop_images/logo-dark.svg",
+            "brand": "HOMECOURT"
+          }
+        },
+        "review_NDn8NH": {
+          "type": "review",
+          "settings": {
+            "name": "Genevieve M.",
+            "verified": true,
+            "rating": 5,
+            "title": "Very Pleased with my purchase!",
+            "description": "I ordered the rose-steeped dishwashing liquid, hand soap, and spray bottle with surface cleaner for the kitchen. The products are elegant looking, smell great and they lift my spirits each time they are used.",
+            "date": "24.02.2023",
+            "image": "shopify://shop_images/logo-dark.svg",
+            "brand": "HOMECOURT"
+          }
+        },
+        "review_a8hmik": {
+          "type": "review",
+          "settings": {
+            "name": "Genevieve M.",
+            "verified": true,
+            "rating": 5,
+            "title": "Very Pleased with my purchase!",
+            "description": "I ordered the rose-steeped dishwashing liquid, hand soap, and spray bottle with surface cleaner for the kitchen. The products are elegant looking, smell great and they lift my spirits each time they are used.",
+            "date": "24.02.2023",
+            "image": "shopify://shop_images/logo-dark.svg",
+            "brand": "HOMECOURT"
+          }
+        },
+        "review_zFceqC": {
+          "type": "review",
+          "settings": {
+            "name": "Genevieve M.",
+            "verified": true,
+            "rating": 5,
+            "title": "Very Pleased with my purchase!",
+            "description": "I ordered the rose-steeped dishwashing liquid, hand soap, and spray bottle with surface cleaner for the kitchen. The products are elegant looking, smell great and they lift my spirits each time they are used.",
+            "date": "24.02.2023",
+            "image": "shopify://shop_images/logo-dark.svg",
+            "brand": "HOMECOURT"
+          }
+        }
+      },
+      "block_order": [
+        "review_FYEA4Y",
+        "review_NDn8NH",
+        "review_a8hmik",
+        "review_zFceqC"
+      ],
+      "name": "Static Reviews",
+      "settings": {
+        "background_image": "shopify://shop_images/homecourt-customer-reviews.webp",
+        "subtitle": "CUSTOMER REVIEWS",
+        "title": "<p>SAME JOY,<br/>DIFFERENT PEOPLE</p>",
+        "rating": 5,
+        "total_reviews": 3545,
+        "total_reviews_label": "STARS OF 3,545 REVIEWS",
+        "cta_text": "SEE ALL REVIEWS",
+        "cta_url": ""
+      }
+    },
+    "single_review_YtDQjV": {
+      "type": "single-review",
+      "name": "Single Review",
+      "settings": {
+        "image": "shopify://shop_images/homecourt-review.webp",
+        "quote_icon": "shopify://shop_images/Group_20.svg",
+        "letter_label": "LETTER FROM COURTENEY",
+        "quote": "I wanted to create something that not only works but looks beautiful on your counter. Homecourt is about elevating everyday routines into something special.",
+        "description": "Leave a lasting impression with homecare gifts that speak volumes—crafted with intention, clean formulations, and custom fragrance blends. Leave a lasting impression with homecare gifts that speak volumes—crafted with intention, clean formulations, and custom fragrance blends.",
+        "author_name": "COURTENEY COX",
+        "author_title": "FOUNDER OF THE HOMECOURT",
+        "padding_top": 60,
+        "padding_bottom": 60,
+      }
+    },
+    "personal_inquiry_hQFCBG": {
+      "type": "personal-inquiry",
+      "name": "Personal Inquiry Section",
+      "settings": {
+        "background_image": "shopify://shop_images/homecourt-get-in-touch.webp",
+        "eyebrow": "GET IN TOUCH",
+        "title": "LET'S MAKE IT PERSONAL",
+        "description": "Whether you're thanking clients, welcoming new hires, or celebrating milestones, our curated gift sets offer a refined blend of beauty, fragrance, and function—crafted to elevate every space they touch.",
+        "padding_top": 55,
+        "padding_bottom": 55
+      }
+    }
+  },
+  "order": [
+    "corporate_gifting_how_it_works_ejLVkP",
+    "why_choose_HXQmrQ",
+    "signature_gifting_dBhmcK",
+    "best_selling_sets_TrGFTy",
+    "static_reviews_RPr6eh",
+    "single_review_YtDQjV",
+    "personal_inquiry_hQFCBG"
+  ]
+}

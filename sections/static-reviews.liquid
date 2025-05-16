@@ -1,0 +1,172 @@
+{%- style -%}
+  {% render 'static-reviews.css' %}
+{%- endstyle -%}
+
+<script src="{{ 'static-review.js' | asset_url }}" defer="defer"></script>
+
+<section
+  style="background-image: url('{{ section.settings.background_image | image_url: width: 1920 }}');"
+  class="static-reviews"
+>
+  <div class="static-reviews__header">
+    <div class="static-reviews__split-wrapper">
+      <div class="static-reviews__details">
+        <span class="static-reviews__subtitle">{{ section.settings.subtitle }}</span>
+        <h2 class="static-reviews__title">{{ section.settings.title }}</h2>
+      </div>
+      <div class="static-reviews__rating">
+        <div class="static-reviews__rating-info">
+          <span class="static-reviews__rating">{{ section.settings.rating }}.0</span>
+          <div class="static-reviews__rating-total-wrapper">
+            <div class="static-reviews__rating-total">
+              <span class="static-reviews__stars">
+                {% for i in (1..5) %}
+                  <img
+                    src="{{ 'star.svg' | asset_url  }}"
+                    alt="{{ product.title | escape }}"
+                    class="best-selling-set-card__image"
+                  >
+                {% endfor %}
+              </span>
+            </div>
+            <span class="static-reviews__total">
+              {{ section.settings.total_reviews_label }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="static-reviews_container">
+      <div class="swiper static-reviews__cards">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              {% render 'static-reviews-card', block: block %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <a class="static-reviews__cta" href="{{ section.settings.cta_url }}">{{ section.settings.cta_text }}</a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Static Reviews",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "CUSTOMER REVIEWS"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "<h2>SAME JOY, DIFFERENT PEOPLE</h2>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "number",
+      "id": "rating",
+      "label": "Rating",
+      "default": 5
+    },
+    {
+      "type": "number",
+      "id": "total_reviews",
+      "label": "Total Reviews",
+      "default": 3545
+    },
+    {
+      "type": "text",
+      "id": "total_reviews_label",
+      "label": "Total Reviews Label",
+      "default": "STARS OF 3,545 REVIEWS"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Text",
+      "default": "SEE ALL REVIEWS"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "CTA URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Static Review Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "Genevieve M."
+        },
+        {
+          "type": "checkbox",
+          "id": "verified",
+          "label": "Verified",
+          "default": true
+        },
+        {
+          "type": "number",
+          "id": "rating",
+          "label": "Rating",
+          "default": 5
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title of Review",
+          "default": "Very Pleased with my purchase!"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description of Review",
+          "default": "I ordered the rose-steeped dishwashing liquid, hand soap, and spray bottle with surface cleaner for the kitchen. The products are elegant looking, smell great and they lift my spirits each time they are used."
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Date",
+          "default": "24.02.2023"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Reviewer Image"
+        },
+        {
+          "type": "text",
+          "id": "brand",
+          "label": "Brand",
+          "default": "HOMECOURT"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Static Reviews"
+    }
+  ]
+}
+{% endschema %}

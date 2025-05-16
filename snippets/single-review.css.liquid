@@ -1,0 +1,165 @@
+.single-review {
+  display: flex;
+  align-items: stretch;
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 0 6rem;
+  gap: 4.6rem;
+
+  @media (width <= 767px) {
+    flex-direction: column;
+    padding: 0 1.6rem;
+  }
+
+  .single-review__image {
+    height: 100%;
+
+    img {
+      min-width: 48.7rem;
+      height: 100%;
+
+      @media (width <= 767px) {
+        min-width: 100%;
+      }
+
+      @media (768px <= width <= 1180px) {
+        min-width: 100%;
+      }
+    }
+  }
+
+  .single-review__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @media (width <= 767px) {
+      gap: 1.2rem;
+    }
+
+    @media (768px <= width <= 1180px) {
+      gap: 1.8rem;
+    }
+
+    .single-review__quote-icon {
+      position: relative;
+
+      img {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      &::after {
+        content: "";
+        width: calc(100% - 8rem);
+        height: 0.1rem;
+        display: block;
+        background: #ddd;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+
+      &.single-review__quote-icon--right {
+        display: flex;
+        flex-direction: row-reverse;
+
+        img {
+          transform: rotate(180deg);
+        }
+
+        &::after {
+          right: unset;
+          left: 0;
+        }
+      }
+    }
+
+    .single-review__letter-label {
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 1.5rem;
+      letter-spacing: 0%;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    .single-review__accordion {
+      width: 100%;
+
+      .single-review__accordion-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+
+        .single-review__quote {
+          font-family: ITC Benguiat Std;
+          font-weight: 500;
+          font-style: italic;
+          font-size: 3rem;
+          line-height: 3.5rem;
+          letter-spacing: 3%;
+          color: #333;
+          text-align: left;
+
+          @media (width <= 767px) {
+            margin-top: 2rem;
+          }
+        }
+      }
+
+      .single-review__accordion-content {
+        width: 100%;
+        display: block;
+
+        .single-review__description {
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+          letter-spacing: 0%;
+          color: #555;
+          margin-top: 1.8rem;
+        }
+      }
+
+      .single-review__accordion-arrow {
+        margin-top: 1.6rem;
+        transition: transform 0.3s;
+        display: block;
+        margin-left: auto;
+      }
+    }
+
+    .single-review__author {
+      display: flex;
+      flex-direction: column;
+      gap: 1.7rem;
+
+      .single-review__author-name {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 1.5rem;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        color: #333;
+      }
+
+      .single-review__author-title {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.5rem;
+        letter-spacing: 3%;
+        text-transform: uppercase;
+        color: #333;
+      }
+    }
+  }
+}

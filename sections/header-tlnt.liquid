@@ -1,0 +1,191 @@
+{% comment %} sections/header.liquid {% endcomment %}
+
+{%- style -%}
+  {% render 'header-tlnt.css' %}
+{%- endstyle -%}
+
+<script src="{{ 'header-tnlt.js' | asset_url }}" defer="defer"></script>
+
+<header
+  style="background-image: url('{{ section.settings.background_image | image_url: width: 1920 }}');"
+  class="header-tlnt"
+>
+  <div class="header-tlnt__container">
+    <div class="header-tlnt__wrapper">
+      <nav>
+        {% render 'header-menu-tlnt', menu: section.settings.left_menu %}
+      </nav>
+
+      <div class="header-tlnt__logo">
+        <a href="/" class="header-tlnt__logo-link">
+          {%- if section.settings.logo != blank -%}
+            <img
+              src="{{ section.settings.logo | image_url: width: 400 }}"
+              alt="{{ shop.name | escape }}"
+              width="{{ section.settings.logo_width }}"
+              height="auto"
+              loading="eager"
+              class="header-tlnt__logo-image"
+            >
+          {%- else -%}
+            <span class="header-tlnt__logo-text">{{ shop.name }}</span>
+          {%- endif -%}
+        </a>
+      </div>
+
+      <nav>
+        {% render 'header-menu-tlnt', menu: section.settings.right_menu %}
+      </nav>
+
+      <button class="header-tlnt__hamburger" aria-label="Abrir menu" aria-controls="mobileMenu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero-tlnt">
+    <div class="hero-tlnt__content">
+      {%- if section.settings.subtitle != blank -%}
+        <p class="hero-tlnt__subtitle">{{ section.settings.subtitle }}</p>
+      {%- endif -%}
+
+      {%- if section.settings.title != blank -%}
+        <h1 class="hero-tlnt__title">{{ section.settings.title }}</h1>
+      {%- endif -%}
+
+      {%- if section.settings.description != blank -%}
+        <p class="hero-tlnt__description">{{ section.settings.description }}</p>
+      {%- endif -%}
+
+      <div class="hero-tlnt__cta-container">
+        {%- if section.settings.cta1_text != blank -%}
+          <a href="{{ section.settings.cta1_url }}" class="hero-tlnt__cta hero-tlnt__cta--primary">{{ section.settings.cta1_text }}</a>
+        {%- endif -%}
+
+        {%- if section.settings.cta2_text != blank -%}
+          <a href="{{ section.settings.cta2_url }}" class="hero-tlnt__cta hero-tlnt__cta--secondary">{{ section.settings.cta2_text }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</header>
+
+<div id="mobileMenu" class="header-tlnt__mobile-modal" aria-hidden="true">
+  <div class="header-tlnt__mobile-modal-content">
+    <button class="header-tlnt__mobile-close" aria-label="Close menu">&times;</button>
+    {% render 'header-menu-tlnt', menu: section.settings.resposive_menu %}
+  </div>
+  <div class="header-tlnt__mobile-modal-backdrop"></div>
+</div>
+
+{% schema %}
+{
+  "name": "Header",
+  "class": "shopify-section-header",
+  "tag": "header",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "left_menu",
+      "label": "Left Menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 50,
+      "max": 250,
+      "step": 5,
+      "unit": "px",
+      "label": "Largura do Logo",
+      "default": 120
+    },
+    {
+      "type": "link_list",
+      "id": "right_menu",
+      "label": "Right Menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "link_list",
+      "id": "resposive_menu",
+      "label": "Menu Mobile",
+      "default": "main-menu"
+    },
+    {
+      "type": "header",
+      "content": "Hero Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "New Collection"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Summer Essentials"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Discover our premium selection of seasonal items"
+    },
+    {
+      "type": "header",
+      "content": "Call to Action 1"
+    },
+    {
+      "type": "text",
+      "id": "cta1_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "cta1_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Call to Action 2"
+    },
+    {
+      "type": "text",
+      "id": "cta2_text",
+      "label": "Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "cta2_url",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header TLNT",
+      "category": "Header"
+    }
+  ],
+  "enabled_on": {
+    "groups": ["header"]
+  }
+}
+{% endschema %}

@@ -1,0 +1,127 @@
+{%- style -%}
+  {% render 'single-review.css' %}
+{%- endstyle -%}
+
+<script src="{{ 'single-review.js' | asset_url }}" defer="defer"></script>
+
+<div
+  class="single-review"
+  style="padding-top: {{ section.settings.padding_top | default: '0px' }}; padding-bottom: {{ section.settings.padding_bottom | default: '0px' }};"
+>
+  <div class="single-review__image">
+    <img width="487" height="auto" src="{{ section.settings.image | img_url: '800x' }}" alt="{{ section.settings.author_name }}">
+  </div>
+  <div class="single-review__content">
+    <div class="single-review__quote-icon">
+      <img src="{{ section.settings.quote_icon | img_url: '32x' }}" alt="Quote Icon">
+    </div>
+    <div class="single-review__letter-label">
+      {{ section.settings.letter_label }}
+    </div>
+    <div class="single-review__accordion">
+      <button
+        class="single-review__accordion-toggle"
+        type="button"
+        aria-expanded="true"
+        aria-controls="single-review__accordion-content"
+        onclick="toggleSingleReviewAccordion(this)"
+      >
+        <span class="single-review__quote">"{{ section.settings.quote }}"</span>
+      </button>
+      <div
+        id="single-review__accordion-content"
+        class="single-review__accordion-content"
+        style="display: block;"
+      >
+        <div
+          class="single-review__description"
+          onclick="toggleSingleReviewAccordion(this.closest('.single-review__accordion').querySelector('.single-review__accordion-toggle'))"
+          style="cursor:pointer;"
+        >
+          {{ section.settings.description }}
+        </div>
+      </div>
+      <img
+        class="single-review__accordion-arrow"
+        src="{{ 'arrow-down.svg' | asset_url }}"
+        alt="Toggle"
+        onclick="toggleSingleReviewAccordion(this.closest('.single-review__accordion').querySelector('.single-review__accordion-toggle'))"
+        style="cursor:pointer;"
+      >
+    </div>
+    <div class="single-review__quote-icon single-review__quote-icon--right">
+      <img src="{{ section.settings.quote_icon | img_url: '32x' }}" alt="Quote Icon">
+    </div>
+    <div class="single-review__author">
+      <div class="single-review__author-name">{{ section.settings.author_name }}</div>
+      <div class="single-review__author-title">{{ section.settings.author_title }}</div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Single Review",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Author Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "quote_icon",
+      "label": "Quote Icon"
+    },
+    {
+      "type": "text",
+      "id": "letter_label",
+      "label": "Letter Label",
+      "default": "LETTER FROM COURTENEY"
+    },
+    {
+      "type": "textarea",
+      "id": "quote",
+      "label": "Quote",
+      "default": "I wanted to create something that not only works but looks beautiful on your counter. Homecourt is about elevating everyday routines into something special."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Leave a lasting impression with homecare gifts that speak volumes—crafted with intention, clean formulations, and custom fragrance blends. Leave a lasting impression with homecare gifts that speak volumes—crafted with intention, clean formulations, and custom fragrance blends."
+    },
+    {
+      "type": "text",
+      "id": "author_name",
+      "label": "Author Name",
+      "default": "COURTENEY COX"
+    },
+    {
+      "type": "text",
+      "id": "author_title",
+      "label": "Author Title",
+      "default": "FOUNDER OF THE HOMECOURT"
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "default": 60,
+      "info": "Eg: 60"
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "default": 60,
+      "info": "Eg: 60"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Single Review"
+    }
+  ]
+}
+{% endschema %}

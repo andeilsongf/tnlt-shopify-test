@@ -1,0 +1,19 @@
+<ul class="nav-list flex gap-6">
+  {%- for link in menu.links -%}
+    <li class="nav-item relative group">
+      <a href="{{ link.url }}" class="nav-link py-2">
+        {{ link.title }}
+      </a>
+      
+      {%- if link.links != blank -%}
+        <div class="submenu absolute hidden group-hover:block bg-white shadow-lg">
+          {%- for childlink in link.links -%}
+            <a href="{{ childlink.url }}" class="block px-6 py-2 hover:bg-gray-100">
+              {{ childlink.title }}
+            </a>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </li>
+  {%- endfor -%}
+</ul>
