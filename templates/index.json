@@ -60,7 +60,7 @@
         "description": "Leave a lasting impression with homecare gifts that speak volumes—crafted with intention, clean formulations, and custom fragrance blends.",
         "cta_link": "https://google.com",
         "cta_text": "INQUIRE NOW",
-        "margin_top": 92,
+        "margin_top": 96,
         "margin_bottom": 96
       }
     },
@@ -110,8 +110,8 @@
       "settings": {
         "subtitle": "WHY CHOOSE HOMECOURT",
         "title": "<p>Elevating <br/>Everyday Routines</p>",
-        "margin_top": 40,
-        "margin_bottom": 40
+        "margin_top": 0,
+        "margin_bottom": 96
       }
     },
     "signature_gifting_dBhmcK": {
