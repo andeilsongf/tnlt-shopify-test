@@ -6,7 +6,7 @@
 
 <div
   class="single-review"
-  style="padding-top: {{ section.settings.padding_top | default: '0px' }}; padding-bottom: {{ section.settings.padding_bottom | default: '0px' }};"
+  style="padding-top: {{ section.settings.padding_top | default: 96 }}px; padding-bottom: {{ section.settings.padding_bottom | default: 96 }}px;"
 >
   <div class="single-review__image">
     <img width="487" height="auto" src="{{ section.settings.image | img_url: '800x' }}" alt="{{ section.settings.author_name }}">
