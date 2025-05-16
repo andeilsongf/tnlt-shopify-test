@@ -61,15 +61,17 @@
       "name": "Header TLNT",
       "settings": {
         "left_menu": "main-menu",
-        "logo_width": 120,
+        "logo": "shopify://shop_images/homecourt-logo.svg",
+        "logo_width": 190,
         "right_menu": "main-menu",
         "resposive_menu": "main-menu",
-        "subtitle": "New Collection",
-        "title": "Summer Essentials",
-        "description": "Discover our premium selection of seasonal items",
-        "cta1_text": "Shop Now",
+        "background_image": "shopify://shop_images/homecourt-hero-header.webp",
+        "subtitle": "LUXURY HOMECARE GIFTS",
+        "title": "ELEVATED GIFTING FOR REFINED TASTES",
+        "description": "Whether you're thanking clients, welcoming new hires, or celebrating milestones, our curated gift sets offer a refined blend of beauty, fragrance, and function—crafted to elevate every space they touch.",
+        "cta1_text": "INQUIRE NOW",
         "cta1_url": "",
-        "cta2_text": "Learn More",
+        "cta2_text": "LEARN MORE",
         "cta2_url": ""
       }
     }
