@@ -11,6 +11,7 @@
       {% endif %}
       <a href="{{ product.url }}">
         <img
+          loading="lazy"
           src="{{ product.featured_image | image_url: width: 600 }}"
           alt="{{ product.title | escape }}"
           class="best-selling-set-card__image"
@@ -35,6 +36,7 @@
           {% assign rating = product.metafields.reviews.rating.value | default: 5 %}
           {% for i in (1..rating) %}
             <img
+              loading="lazy"
               src="{{ 'star.svg' | asset_url  }}"
               alt="{{ product.title | escape }}"
               class="best-selling-set-card__image"

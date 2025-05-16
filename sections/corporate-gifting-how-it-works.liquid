@@ -16,6 +16,7 @@
         src="{{ section.settings.main_image | img_url: '800x' }}"
         alt="How it works image"
         class="how-it-works-tlnt__image"
+        loading="lazy"
       >
     </div>
   {% endif %}
@@ -35,6 +36,7 @@
                 height="19"
                 src="{{ block.settings.step_image | img_url: '60x60' }}"
                 alt="Step image"
+                loading="lazy"
               >
             {% endif %}
           </div>

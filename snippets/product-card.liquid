@@ -10,6 +10,7 @@
       src="{{ block.settings.image | image_url: width: 400 }}"
       alt="{{ block.settings.title | escape }}"
       class="product-card__image"
+      loading="lazy"
     >
   {% endif %}
   {% if block.settings.title != blank %}

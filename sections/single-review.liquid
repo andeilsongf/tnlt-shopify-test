@@ -9,11 +9,11 @@
   style="padding-top: {{ section.settings.padding_top | default: 96 }}px; padding-bottom: {{ section.settings.padding_bottom | default: 96 }}px;"
 >
   <div class="single-review__image">
-    <img width="487" height="auto" src="{{ section.settings.image | img_url: '800x' }}" alt="{{ section.settings.author_name }}">
+    <img loading="lazy" width="487" height="auto" src="{{ section.settings.image | img_url: '800x' }}" alt="{{ section.settings.author_name }}">
   </div>
   <div class="single-review__content">
     <div class="single-review__quote-icon">
-      <img src="{{ section.settings.quote_icon | img_url: '32x' }}" alt="Quote Icon">
+      <img loading="lazy" src="{{ section.settings.quote_icon | img_url: '32x' }}" alt="Quote Icon">
     </div>
     <div class="single-review__letter-label">
       {{ section.settings.letter_label }}
@@ -47,10 +47,11 @@
         alt="Toggle"
         onclick="toggleSingleReviewAccordion(this.closest('.single-review__accordion').querySelector('.single-review__accordion-toggle'))"
         style="cursor:pointer;"
+        loading="lazy"
       >
     </div>
     <div class="single-review__quote-icon single-review__quote-icon--right">
-      <img src="{{ section.settings.quote_icon | img_url: '32x' }}" alt="Quote Icon">
+      <img loading="lazy" src="{{ section.settings.quote_icon | img_url: '32x' }}" alt="Quote Icon">
     </div>
     <div class="single-review__author">
       <div class="single-review__author-name">{{ section.settings.author_name }}</div>

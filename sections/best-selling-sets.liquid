@@ -8,8 +8,8 @@
   style="background-image: url('{{ section.settings.background_image | image_url: width: 1920 }}');padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"
   class="best-selling-sets"
 >
-  <img class="best-selling-sets__before" src="{{ section.settings.background_image_left | image_url: width: 300 }}">
-  <img class="best-selling-sets__after" src="{{ section.settings.background_image_right | image_url: width: 300 }}">
+  <img loading="lazy" class="best-selling-sets__before" src="{{ section.settings.background_image_left | image_url: width: 300 }}">
+  <img loading="lazy"class="best-selling-sets__after" src="{{ section.settings.background_image_right | image_url: width: 300 }}">
   <div class="best-selling-sets__header">
     {% if section.settings.subtitle != blank %}
       <p class="best-selling-sets__subtitle">{{ section.settings.subtitle }}</p>
